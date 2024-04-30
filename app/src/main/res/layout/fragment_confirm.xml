@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="2dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".presentation.fragments.ConfirmFragment">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20sp"
+            android:text="@string/confirm"
+            android:textColor="#334155"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="4dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="13sp"
+            android:text="@string/confirm_delete"
+            android:textColor="#475569"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_positive"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="4dp"
+            android:padding="0dp"
+            android:background="@drawable/bg_primary_rounded12"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="13sp"
+            android:text="@string/sure"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/tv_description"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_negative"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="4dp"
+            android:padding="0dp"
+            android:background="@drawable/bg_grey_slate100_rounded12"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="13sp"
+            android:text="@string/no"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/btn_positive"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/income_nav"
+    app:startDestination="@id/incomesFragment">
+
+    <fragment
+        android:id="@+id/incomesFragment"
+        android:name="com.example.testandroid2.presentation.fragments.IncomesFragment"
+        android:label="fragment_incomes_fragment"
+        tools:layout="@layout/fragment_incomes" >
+        <action
+            android:id="@+id/action_incomesFragment_to_addIncomeFragment"
+            app:destination="@id/addIncomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIncomeFragment"
+        android:name="com.example.testandroid2.presentation.fragments.AddIncomeFragment"
+        android:label="fragment_add_income"
+        tools:layout="@layout/fragment_add_income">
+        <argument
+            android:name="data_income"
+            app:argType="com.example.testandroid2.datasource.local.ItemIncomePos"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TestAndroid2</string>
+    <string name="cash_income">Uang Masuk</string>
+    <string name="add_income">Buat Transaksi Uang Masuk</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="show_image">Lihat Foto</string>
+    <string name="save">Simpan</string>
+    <string name="button_back">Button Back</string>
+    <string name="from">Dari</string>
+    <string name="nominal">Jumlah</string>
+    <string name="description">Keterangan</string>
+    <string name="type">Jenis</string>
+    <string name="desc_image">Foto Bukti Transfer/Nota/Kwitansi</string>
+    <string name="photo">Foto</string>
+    <string name="desc_format">Dari %1$s ke %2$s</string>
+    <string name="destination">Masuk ke</string>
+    <string-array name="type_income">
+        <item>Pendapatan Lain</item>
+        <item>Non Pendapatan</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">Konfirmasi</string>
+    <string name="confirm_delete">Apakah anda yakin menghapus item ini?</string>
+    <string name="sure">Yakin</string>
+    <string name="no">Tidak</string>
+</resources>
