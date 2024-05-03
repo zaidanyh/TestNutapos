@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/incomesFragment"
-        android:name="com.example.testandroid2.presentation.fragments.IncomesFragment"
+        android:name="com.nutapos.testandroid2.presentation.fragments.IncomesFragment"
         android:label="fragment_incomes_fragment"
         tools:layout="@layout/fragment_incomes" >
         <action
@@ -16,11 +16,8 @@
     </fragment>
     <fragment
         android:id="@+id/addIncomeFragment"
-        android:name="com.example.testandroid2.presentation.fragments.AddIncomeFragment"
+        android:name="com.nutapos.testandroid2.presentation.fragments.AddIncomeFragment"
         android:label="fragment_add_income"
         tools:layout="@layout/fragment_add_income">
-        <argument
-            android:name="data_income"
-            app:argType="com.example.testandroid2.datasource.local.ItemIncomePos"/>
     </fragment>
 </navigation>

@@ -2,16 +2,17 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
-    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs")
 }
 
 android {
-    namespace = "com.example.testandroid2"
+    namespace = "com.nutapos.testandroid2"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.testandroid2"
+        applicationId = "com.nutapos.testandroid2"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,11 +34,6 @@ android {
             )
         }
     }
-    kapt {
-        arguments {
-            arg("room.schemaLocation", "$projectDir/schemas")
-        }
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -47,9 +43,6 @@ android {
     }
     buildFeatures {
         viewBinding = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
     }
     packaging {
         resources {
@@ -71,25 +64,28 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
-    implementation("com.github.dhaval2404:imagepicker:2.1")
-
     // room
     implementation("androidx.room:room-runtime:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
 
     // coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
-    implementation("io.insert-koin:koin-android:3.1.5")
-    implementation("io.insert-koin:koin-androidx-navigation:3.1.5")
+    // Hilt Dependency Injection
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    ksp("com.google.dagger:dagger-compiler:2.51.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
 
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-    //photoView
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation("com.github.chrisbanes:PhotoView:2.3.0")
+    // CameraX core library using the camera2 implementation
+    val cameraX_version = "1.3.3"
+    implementation("androidx.camera:camera-core:${cameraX_version}")
+    implementation("androidx.camera:camera-camera2:${cameraX_version}")
+    implementation("androidx.camera:camera-lifecycle:${cameraX_version}")
+    implementation("androidx.camera:camera-view:${cameraX_version}")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
