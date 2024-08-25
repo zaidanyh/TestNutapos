@@ -69,7 +69,7 @@ class IncomesFragment : Fragment() {
 
             override fun onShowPhotoListener(image: String) {
                 Log.d("imageIncome", image)
-                PhotoViewFragment.newInstance(image = image).show(requireActivity().supportFragmentManager, "Show Image")
+                PhotoViewWindow.newInstance(image = image).show(requireActivity().supportFragmentManager, "Show Image")
             }
         })
 

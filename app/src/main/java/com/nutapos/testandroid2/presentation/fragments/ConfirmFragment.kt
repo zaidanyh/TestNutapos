@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
+import com.nutapos.testandroid2.R
 import com.nutapos.testandroid2.databinding.FragmentConfirmBinding
 import com.nutapos.testandroid2.presentation.IncomeEvent
 import com.nutapos.testandroid2.presentation.MainViewModel
@@ -17,6 +18,11 @@ class ConfirmFragment : DialogFragment() {
     private val binding get() = _binding!!
 
     private val viewModel: MainViewModel by activityViewModels()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(STYLE_NORMAL, R.style.DialogNoCloseTheme)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

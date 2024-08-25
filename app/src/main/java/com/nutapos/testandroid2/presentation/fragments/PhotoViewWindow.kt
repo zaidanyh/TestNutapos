@@ -8,7 +8,7 @@ import androidx.fragment.app.DialogFragment
 import com.nutapos.testandroid2.databinding.FragmentPhotoViewBinding
 import com.nutapos.testandroid2.utils.convertStringToBitMap
 
-class PhotoViewFragment : DialogFragment() {
+class PhotoViewWindow : DialogFragment() {
 
     private var _binding: FragmentPhotoViewBinding? = null
     private val binding get() = _binding!!
@@ -42,7 +42,7 @@ class PhotoViewFragment : DialogFragment() {
 
         @JvmStatic
         fun newInstance(image: String) =
-            PhotoViewFragment().apply {
+            PhotoViewWindow().apply {
                 arguments = Bundle().apply {
                     putString(INCOME_IMAGE, image)
                 }
